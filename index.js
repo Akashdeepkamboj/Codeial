@@ -1,9 +1,8 @@
 const express = require('express');
 const app = express();             //firing app the server
 const port = 8070;                 //default website work on 80 port
-
-
 const expressLayouts = require('express-ejs-layouts');
+const db = require('./config/mongoose');
 
 app.use(express.static('./assets'));
 
