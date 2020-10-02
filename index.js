@@ -3,6 +3,17 @@ const app = express();             //firing app the server
 const port = 8070;                 //default website work on 80 port
 
 
+const expressLayouts = require('express-ejs-layouts');
+
+app.use(express.static('./assets'));
+
+
+app.use(expressLayouts);
+
+//extract style and script can be added to the layout from home.ejs 
+app.set('lauout extraStyles', true);
+
+
 //use express router to handle all the requests
 app.use('/',require('./routes'));
 
