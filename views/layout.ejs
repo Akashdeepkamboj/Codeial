@@ -1,19 +1,22 @@
 <html>
-    <head><title>
-        <%= title %>
-    </title>
-    <link rel="stylesheet" href="./css/layout.css">
-<%- style %>
+    <head>
+        <title>
+            <%= title  %>
+        </title>
+        <link rel="stylesheet" href="/css/layout.css">
+        
+        <%- style %>
     </head>
 
     <body>
-        <!--adding partials to the ejs file-->
-        <%- include('_header'); -%>
+        <%- include('_header'); %>
 
-       <%- body %>
+        <%- body %>
 
-        <%- include ('_footer'); %>
 
-        <%-script %>
+        <%- include('_footer'); %>
+
+        <%- script %>
+        
     </body>
 </html>
