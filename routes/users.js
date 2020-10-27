@@ -3,11 +3,14 @@ const router = express.Router();
 
 const usersController = require('../controller/user_controller');
 
-router.get('/profile',usersController.profile)
-router.get('/signIn',usersController.signIn);
-router.get('/signUp',usersController.signUp);
-router.post('/create',usersController.create);
+router.get('/profile', usersController.profile);
 
-console.log('inside user.js file')
+router.get('/sign-up', usersController.signUp);
+router.get('/sign-in', usersController.signIn);
+
+
+router.post('/create', usersController.create);
+router.post('/create-session', usersController.createSession);
+
 
 module.exports = router;
